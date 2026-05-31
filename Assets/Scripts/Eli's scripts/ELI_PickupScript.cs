@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class ELI_PickupScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameManager gameManager;
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
+
+    private void OnTriggerEnter(Collider otherObject)
+    {
+        if (otherObject.transform.tag == "Player")
+        {
+            gameManager.currentPickups += 1;
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame
