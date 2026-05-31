@@ -28930,7 +28930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 316306052}
-  currentPickups: 0
+  currentPickups: 10
   maxPickups: 10
   gateThreshold: 5
   levelComplete: 0
